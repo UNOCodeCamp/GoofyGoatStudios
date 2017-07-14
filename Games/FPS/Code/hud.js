@@ -3,7 +3,10 @@ hud = new Object();
 
 hud.draw = function()
 {
-
+ hud.drawText("Score " +game.score, 32,32, "left", 24)
+  hud.drawText("Time " + ~~game.timer, viewport.width-32,32, "right", 24)
+  hud.drawText("Hit " +game.score, 32,60, "left", 24)
+  hud.drawText("Ammo " +game.ammo, viewport.width-32,60, "right", 24)
 };
 
 hud.drawText = function(text, x, y, align, size)

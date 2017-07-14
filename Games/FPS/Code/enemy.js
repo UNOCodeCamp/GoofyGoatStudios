@@ -3,12 +3,14 @@ var enemy = new Enemy();
 
 function Enemy()
 {
-	this.x = 0;
-	this.y = 0;
+	
 	this.image = new Image();
-	this.image.src = ""
-	this.width = 32;
-	this.height = 32;
+	this.image.src = "Assets/seegaul.png"
+	this.width = 80;
+	this.height = 80;
+	this.x = Math.random() * (viewport.width - this.width);
+	this.y = Math.random() * (viewport.height - this.height)
+	this.age = Date.now();
 
 	this.draw = function()
 	{
@@ -30,6 +32,9 @@ function Enemy()
 
 	this.move = function() 
 	{
+		this.age = Date.now();
+		this.x = Math.random() * (viewport.width);
+	this.y = Math.random() * (viewport.height);
 
 	}
 
